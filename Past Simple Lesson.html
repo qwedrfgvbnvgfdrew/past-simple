@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Past Simple Lesson</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef1f6;--card:#fff;--ink:#16213a;--mut:#5b6785;--acc:#e8a33d;--acc2:#2f5bd8;--ok:#1f9d63;--bad:#d64545;--line:#d5dbe8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1628;--card:#18223b;--ink:#eef1f8;--mut:#9aa6c4;--line:#2b3757;--acc2:#7f9bff}}
+:root[data-theme="dark"]{--bg:#0f1628;--card:#18223b;--ink:#eef1f8;--mut:#9aa6c4;--line:#2b3757;--acc2:#7f9bff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Bricolage Grotesque",system-ui,sans-serif}
+main{max-width:860px;margin:0 auto;padding:0 18px 60px}
+.hero{display:grid;grid-template-columns:1fr 150px;gap:20px;align-items:center;padding:36px 0 18px}
+h1{font-size:clamp(2.4rem,8vw,4rem);line-height:1;margin:0 0 10px;font-weight:800}
+h2{font-size:1.7rem;margin:42px 0 4px}h3{margin:30px 0 8px;font-size:1.2rem}
+.uz{display:block;color:var(--mut);font-size:.88em}
+.sub{color:var(--mut);margin:0 0 14px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+nav a,button{font:inherit;border:1.5px solid var(--line);background:var(--card);color:var(--ink);padding:7px 14px;border-radius:999px;text-decoration:none;cursor:pointer}
+button:hover,nav a:hover{border-color:var(--acc2)}button:focus-visible,a:focus-visible{outline:3px solid var(--acc2);outline-offset:2px}
+button.p{background:var(--acc2);color:#fff;border-color:var(--acc2)}
+.clock{width:150px;height:150px}.clock circle{fill:var(--card);stroke:var(--ink);stroke-width:5}
+.clock line{stroke:var(--ink);stroke-linecap:round}
+.hm{transform-origin:75px 75px;animation:back 12s linear infinite}.mm{transform-origin:75px 75px;animation:back 3s linear infinite;stroke:var(--acc)!important}
+@keyframes back{to{transform:rotate(-360deg)}}
+.chips{display:flex;gap:10px;flex-wrap:wrap}.chip{background:var(--card);border-left:5px solid var(--acc);padding:8px 12px;border-radius:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:12px 0}
+.ex{cursor:pointer;border-bottom:1px dashed var(--mut)}
+table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid var(--line);padding:8px;text-align:left}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.rules div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}
+code{background:var(--acc);color:#16213a;padding:1px 7px;border-radius:6px;font-weight:600}
+.warn{border-left:5px solid var(--bad)}.tip{border-left:5px solid var(--ok)}
+.bad{text-decoration:line-through;color:var(--bad)}.good{color:var(--ok)}
+.flips{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+.flip{perspective:600px;height:70px;padding:0;border:0;background:none}
+.flip i{display:block;position:relative;height:100%;transition:transform .5s;transform-style:preserve-3d;font-style:normal}
+.flip.on i{transform:rotateY(180deg)}
+.flip b,.flip u{position:absolute;inset:0;display:grid;place-items:center;border-radius:12px;backface-visibility:hidden;text-decoration:none;font-weight:600}
+.flip b{background:var(--card);border:1.5px solid var(--line)}.flip u{background:var(--acc2);color:#fff;transform:rotateY(180deg)}
+.maker{display:flex;gap:10px;flex-wrap:wrap}select{font:inherit;padding:8px;border-radius:8px;border:1.5px solid var(--line);background:var(--card);color:var(--ink)}
+#out{font-size:1.5rem;font-weight:800;margin-top:12px;min-height:2rem}
+.freq{display:grid;gap:6px}.freq div{display:flex;align-items:center;gap:10px}.bar{height:10px;border-radius:5px;background:var(--acc);transition:width .8s}
+.story p{line-height:2}.s{cursor:pointer;border-radius:5px}.s:hover{background:rgba(232,163,61,.25)}
+.s small{display:none;color:var(--acc2);margin-left:4px}.s.u small,.all .s small{display:inline}
+.v{font-weight:600}.hv .v{background:var(--acc);color:#16213a;border-radius:4px;padding:0 3px}
+.scores{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}.scores span{background:var(--card);border:1px solid var(--line);padding:6px 12px;border-radius:10px}
+.opts{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.opts button.ok{background:var(--ok);color:#fff;border-color:var(--ok)}.opts button.no{background:var(--bad);color:#fff;border-color:var(--bad)}
+.tray{min-height:54px;border:2px dashed var(--line);border-radius:10px;padding:8px;display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.fb{min-height:1.5rem;margin-top:8px;font-weight:600}
+@media (prefers-reduced-motion:reduce){.hm,.mm{animation:none}.flip i,.bar{transition:none}}
+@media (max-width:560px){.hero{grid-template-columns:1fr}.clock{display:none}}
+</style></head><body><main>
+
+<header class="hero"><div>
+<p class="sub">Elementary English</p>
+<h1>Past Simple</h1>
+<p class="sub">Use it to talk about finished actions: what happened yesterday, last week or years ago. Learn the rules, read about Anna’s yesterday, then try three games.
+<span class="uz">O‘tgan oddiy zamon. Tugagan harakatlar uchun ishlatiladi.</span></p>
+<div class="chips"><div class="chip"><b>FINISHED</b> I watched a film yesterday.</div><div class="chip"><b>STORY</b> We visited Samarkand.</div><div class="chip"><b>PAST FACT</b> She lived in Paris in 2019.</div></div>
+<nav><a href="#learn">Learn</a><a href="#read">Read</a><a href="#play">Play</a></nav></div>
+<svg class="clock" viewBox="0 0 150 150" aria-label="Clock turning backwards"><circle cx="75" cy="75" r="68"/><line class="hm" x1="75" y1="75" x2="75" y2="42" stroke-width="6"/><line class="mm" x1="75" y1="75" x2="75" y2="26" stroke-width="4"/></svg></header>
+
+<section id="learn"><h2>How the Past Simple works</h2><p class="sub">Tap any English example to hear it.</p>
+
+<h3>When do we use it? <span class="uz">Qachon ishlatamiz?</span></h3>
+<div class="rules">
+<div><b>Finished actions</b><br><span class="ex">I drank tea this morning.</span><span class="uz">Men bugun ertalab choy ichdim.</span></div>
+<div><b>Past habits</b><br><span class="ex">We played outside every day.</span><span class="uz">Biz har kuni tashqarida o‘ynardik.</span></div>
+<div><b>Stories in order</b><br><span class="ex">He opened the door and left.</span><span class="uz">U eshikni ochdi va ketdi.</span></div></div>
+
+<h3>Positive sentences (+) <span class="uz">Darak gaplar</span></h3>
+<div class="card"><table><tr><th>Subject</th><th>Verb + ed</th><th>Example</th></tr>
+<tr><td><b>I · You · He · She · It · We · They</b></td><td><b>work<u>ed</u></b></td><td><span class="ex">She worked in a bank.</span><span class="uz">U bankda ishlagan edi.</span></td></tr></table></div>
+<div class="card tip"><b>Good news: every subject uses the same form. No -s for he, she, it!</b><span class="uz">Hamma shaxslar uchun bir xil shakl. he, she, it uchun -s yo‘q!</span></div>
+
+<h3>Spelling rules for regular verbs <span class="uz">Imlo qoidalari</span></h3>
+<div class="rules">
+<div>Most verbs <code>+ ed</code><br>work → work<b>ed</b><br>play → play<b>ed</b></div>
+<div>Ends in e <code>+ d</code><br>live → live<b>d</b><br>like → like<b>d</b></div>
+<div>Consonant + y <code>y → ied</code><br>stud<b>y</b> → stud<b>ied</b><br>cry → cr<b>ied</b></div>
+<div>Short verb, 1 vowel + 1 consonant <code>double it</code><br>stop → sto<b>pped</b><br>plan → plan<b>ned</b></div></div>
+
+<h3>Irregular verbs <span class="uz">Noto‘g‘ri fe‘llar</span></h3>
+<p class="sub">These change completely. Tap a card to flip it.</p>
+<div class="flips" id="flips"></div>
+
+<h3>Negative sentences (−) <span class="uz">Inkor gaplar</span></h3>
+<div class="card">subject + <code>didn’t</code> + base verb<br><br>
+<span class="ex">I didn’t like the film.</span><span class="uz">Men filmni yoqtirmadim.</span>
+<span class="ex">She didn’t eat breakfast.</span><span class="uz">U nonushta qilmadi.</span><br>
+<span class="bad">She didn’t went home. ✗</span><br><span class="good">She didn’t go home. ✓</span></div>
+<div class="card tip"><b>After didn’t, the verb goes back to its base form.</b><span class="uz">didn’t dan keyin fe‘l asosiy shaklda turadi.</span></div>
+
+<h3>Questions (?) <span class="uz">So‘roq gaplar</span></h3>
+<div class="card"><code>Did</code> + subject + base verb ?<br><br>
+<span class="ex">Did you play tennis?</span><span class="uz">Siz tennis o‘ynadingizmi?</span>Yes, I did. / No, I didn’t.<br><br>
+<span class="ex">Where did he live?</span><span class="uz">U qayerda yashagan?</span>
+<span class="ex">What time did you get up?</span><span class="uz">Siz soat nechada turdingiz?</span></div>
+<div class="card tip"><b>Did already shows the past, so the verb stays base: Did she play, not Did she played.</b></div>
+
+<h3>Make a sentence <span class="uz">O‘zingiz sinab ko‘ring</span></h3>
+<div class="card"><div class="maker">
+<select id="mw"><option>I</option><option>he</option><option>she</option><option>we</option><option>they</option></select>
+<select id="mv"><option value="play">play</option><option value="watch">watch</option><option value="study">study</option><option value="go">go</option><option value="eat">eat</option><option value="stop">stop</option></select>
+<select id="mt"><option value="+">Positive (+)</option><option value="-">Negative (−)</option><option value="?">Question (?)</option></select></div>
+<div id="out" aria-live="polite"></div></div>
+
+<h3>Time phrases <span class="uz">Vaqt iboralari</span></h3>
+<div class="freq" id="tp"></div>
+<div class="card tip"><b>Next level tip:</b> add a time phrase. I studied. → I studied English last night. <span class="uz">Gapga vaqt iborasini qo‘shing.</span></div>
+</section>
+
+<section id="read"><h2>Anna’s Yesterday</h2>
+<p class="sub">Tap a line to see it in Uzbek. Turn on the highlights to find the Past Simple.</p>
+<label><input type="checkbox" id="hv"> Show verbs</label> &nbsp; <label><input type="checkbox" id="ua"> Show all Uzbek</label>
+<div class="card story" id="story"></div>
+<h3>Talk about it</h3>
+<ol><li>What time did you get up yesterday?</li><li>What did you have for breakfast?</li><li>Did you go to school by bus?</li><li>Did your mother cook dinner?</li><li>What did your family do in the evening?</li></ol></section>
+
+<section id="play"><h2>Three games</h2>
+<p class="sub">Start with Verb Station and work up to Mistake Hunter. Your best score stays on the board.</p>
+<div class="scores"><span>Verb Station <b id="b0">–</b></span><span>Sentence Builder <b id="b1">–</b></span><span>Mistake Hunter <b id="b2">–</b></span></div>
+<nav id="tabs"><button class="p" data-g="0">1 · Verb Station</button><button data-g="1">2 · Sentence Builder</button><button data-g="2">3 · Mistake Hunter</button></nav>
+<div class="card" id="game"></div></section>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+const say=t=>{try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="en-GB";u.rate=.9;speechSynthesis.speak(u)}catch(e){}};
+document.addEventListener("click",e=>{const x=e.target.closest(".ex");if(x)say(x.firstChild.textContent||x.textContent)});
+// flip cards
+const irr=[["go","went"],["have","had"],["eat","ate"],["see","saw"],["buy","bought"],["make","made"],["take","took"],["drink","drank"],["get up","got up"],["leave","left"],["write","wrote"],["come","came"]];
+$("#flips").innerHTML=irr.map(([a,b])=>`<button class="flip"><i><b>${a}</b><u>${b}</u></i></button>`).join("");
+$("#flips").onclick=e=>{const f=e.target.closest(".flip");if(f){f.classList.toggle("on");say(f.querySelector("u").textContent)}};
+// sentence maker
+const pastOf={play:"played",watch:"watched",study:"studied",go:"went",eat:"ate",stop:"stopped"};
+function make(){const w=$("#mw").value,v=$("#mv").value,t=$("#mt").value;
+const W=w==="I"?"I":w[0].toUpperCase()+w.slice(1);
+$("#out").textContent=t==="+"?`${W} ${pastOf[v]} yesterday.`:t==="-"?`${W} didn’t ${v} yesterday.`:`Did ${w} ${v} yesterday?`}
+["#mw","#mv","#mt"].forEach(s=>$(s).onchange=make);make();
+// time phrases
+const tp=[["yesterday","kecha",95],["last night","kecha kechqurun",85],["last week","o‘tgan hafta",70],["two days ago","ikki kun oldin",55],["in 2019","2019-yilda",40],["when I was a child","bolaligimda",25]];
+$("#tp").innerHTML=tp.map(([a,b,n])=>`<div><b style="width:180px">${a}<span class="uz">${b}</span></b><div class="bar" style="width:0" data-w="${n}%"></div></div>`).join("");
+new IntersectionObserver((en,o)=>en.forEach(x=>{if(x.isIntersecting){x.target.querySelectorAll(".bar").forEach(b=>b.style.width=b.dataset.w);o.disconnect()}})).observe($("#tp"));
+// story
+const st=[["Yesterday was Sunday. Anna <b class=v>stayed</b> in bed until nine.","Kecha yakshanba edi. Anna to‘qqizgacha yotdi."],
+["She <b class=v>washed</b> her face and <b class=v>had</b> breakfast.","U yuzini yuvdi va nonushta qildi."],
+["She <b class=v>drank</b> tea and <b class=v>ate</b> bread with eggs.","U choy ichdi va tuxum bilan non yedi."],
+["Then she <b class=v>visited</b> her grandmother with her brother Tom.","Keyin u ukasi Tom bilan buvisinikiga bordi."],
+["They <b class=v>went</b> there by bus. The bus <b class=v>left</b> at ten.","Ular u yerga avtobusda borishdi. Avtobus o‘nda jo‘nadi."],
+["Tom <b class=v>didn’t</b> <b class=v>eat</b> lunch, but he <b class=v>played</b> football in the garden.","Tom tushlik qilmadi, lekin bog‘da futbol o‘ynadi."],
+["In the evening, Anna <b class=v>cooked</b> dinner with her mother.","Kechqurun Anna onasi bilan kechki ovqat pishirdi."],
+["<b class=v>Did</b> she <b class=v>go</b> to bed late? No, she <b class=v>didn’t</b>. She <b class=v>studied</b> English and <b class=v>went</b> to bed at ten.","U kech yotdimi? Yo‘q. U ingliz tilini o‘rgandi va soat o‘nda yotdi."]];
+$("#story").innerHTML="<p>"+st.map(([e,u])=>`<span class="s">${e}<small>(${u})</small></span>`).join(" ")+"</p>";
+$("#story").onclick=e=>{const s=e.target.closest(".s");if(s)s.classList.toggle("u")};
+$("#hv").onchange=e=>$("#story").classList.toggle("hv",e.target.checked);
+$("#ua").onchange=e=>$("#story").classList.toggle("all",e.target.checked);
+// games
+const best=[0,0,0];try{JSON.parse(localStorage.getItem("ps-best")||"[]").forEach((v,i)=>best[i]=v||0)}catch(e){}
+const saveBest=(g,n)=>{if(n>best[g]){best[g]=n;try{localStorage.setItem("ps-best",JSON.stringify(best))}catch(e){}}show()};
+const show=()=>best.forEach((v,i)=>$("#b"+i).textContent=v?v+" / "+[8,5,6][i]:"–");show();
+const sh=a=>[...a].sort(()=>Math.random()-.5);
+const VS=[["Anna ___ to school by bus yesterday.",["goed","went","go"],1],["We ___ football last Sunday.",["played","playd","plays"],0],["She ___ her homework last night.",["studyed","studied","studies"],1],["I ___ eat breakfast this morning.",["didn’t","don’t","wasn’t"],0],["___ you watch TV last night?",["Do","Were","Did"],2],["He ___ a new bag last week.",["buyed","bought","buys"],1],["The train ___ at eight.",["leaved","left","leave"],1],["Did she ___ the door?",["opened","open","opens"],1]];
+const SB=["Anna watched TV yesterday.","I didn’t go to school on Sunday.","Did you eat breakfast?","We played tennis last week.","He bought a red bag."];
+const MH=[[["She watched TV last night.","He goed to the park.","We played football."],1,"go → went (irregular)"],[["Did you saw Tom?","I didn’t like the film.","They visited Samarkand."],0,"After Did use the base verb: Did you see…?"],[["She didn’t went home.","He studied at night.","I opened the window."],0,"After didn’t use the base verb: didn’t go"],[["We stoped at the shop.","I walked to school.","She cooked dinner."],0,"stop → stopped (double the p)"],[["He cryed all night.","They arrived late.","I had a cold."],0,"cry → cried (y → ied)"],[["Where did he live?","What time did you got up?","Did she call you?"],1,"After did use the base verb: did you get up"]];
+const G=$("#game");let sc=0,i=0;
+function end(g,n,t){saveBest(g,n);G.innerHTML=`<h3>Score: ${n} / ${t}</h3><p>${n===t?"Perfect!":"Good work. Try again to beat your best."}</p><button class="p" onclick="start(${g})">Play again</button>`}
+function start(g){sc=0;i=0;[vs,sb,mh][g]()}
+function vs(){if(i>=VS.length)return end(0,sc,VS.length);const [q,o,a]=VS[i];
+G.innerHTML=`<p class="sub">Question ${i+1} / ${VS.length}</p><h3 style="margin:0">${q}</h3><div class="opts">${o.map((x,k)=>`<button data-k="${k}">${x}</button>`).join("")}</div><div class="fb"></div>`;
+G.querySelectorAll(".opts button").forEach(b=>b.onclick=()=>{const k=+b.dataset.k;G.querySelectorAll(".opts button").forEach(x=>x.disabled=true);
+G.querySelectorAll(".opts button")[a].classList.add("ok");if(k===a)sc++;else b.classList.add("no");G.querySelector(".fb").innerHTML=k===a?"Correct!":"The answer is “"+o[a]+"”.";setTimeout(()=>{i++;vs()},1100)})}
+function sb(){if(i>=SB.length)return end(1,sc,SB.length);const s=SB[i],w=s.split(" ");let pick=[];const pool=sh(w.map((x,k)=>({x,k})));
+const draw=()=>{G.innerHTML=`<p class="sub">Sentence ${i+1} / ${SB.length}. Tap the words in the right order.</p><div class="tray">${pick.map(p=>`<button data-r="${p.k}" class="p">${p.x}</button>`).join("")}</div><div class="opts">${pool.filter(p=>!pick.includes(p)).map(p=>`<button data-a="${p.k}">${p.x}</button>`).join("")}</div><div class="fb"></div>`;
+G.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{pick.push(pool.find(p=>p.k==b.dataset.a));if(pick.length<w.length)return draw();draw();const okk=pick.map(p=>p.x).join(" ")===s;if(okk)sc++;G.querySelector(".fb").innerHTML=okk?"Correct!":"Correct order: "+s;say(s);setTimeout(()=>{i++;sb()},1600)});
+G.querySelectorAll("[data-r]").forEach(b=>b.onclick=()=>{pick=pick.filter(p=>p.k!=b.dataset.r);draw()})};draw()}
+function mh(){if(i>=MH.length)return end(2,sc,MH.length);const [l,a,n]=MH[i];
+G.innerHTML=`<p class="sub">Round ${i+1} / ${MH.length}. Which sentence has a mistake?</p><div class="opts" style="flex-direction:column;align-items:stretch">${l.map((x,k)=>`<button data-k="${k}">${x}</button>`).join("")}</div><div class="fb"></div>`;
+G.querySelectorAll("[data-k]").forEach(b=>b.onclick=()=>{const k=+b.dataset.k;G.querySelectorAll("[data-k]").forEach(x=>x.disabled=true);G.querySelectorAll("[data-k]")[a].classList.add("ok");if(k===a)sc++;else b.classList.add("no");G.querySelector(".fb").innerHTML=(k===a?"Found it! ":"Not quite. ")+n;setTimeout(()=>{i++;mh()},1900)})}
+$("#tabs").onclick=e=>{const b=e.target.closest("button");if(!b)return;[...$("#tabs").children].forEach(x=>x.classList.toggle("p",x===b));start(+b.dataset.g)};
+start(0);
+</script></body></html>
